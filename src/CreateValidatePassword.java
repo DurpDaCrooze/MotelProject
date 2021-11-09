@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class CreateValidatePassword {
 
     static String password = "";
+    static int minLength = 3;   //Minimum password Length
+    static int minNum = 1;      //Minimum password Numbers
+    static int minSymb = 1;     //Minimum password Symbols
 
     //Prompting user to log in
     public static boolean logIn(){
@@ -69,7 +72,7 @@ public class CreateValidatePassword {
 
                 }//main loop going through all string characters
 
-                if(passwordItems[0] >= 1 && passwordItems[1] >= 1 && passwordItems[2] >= 1){
+                if(passwordItems[0] >= minLength && passwordItems[1] >= minNum && passwordItems[2] >= minSymb){
                     password = userPass;
                     System.out.println("Password set!");
                     loop = false;

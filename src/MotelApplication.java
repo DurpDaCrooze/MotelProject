@@ -19,9 +19,9 @@ public class MotelApplication {
     static String[] customerMeal = new String[listSize];    //stores what type of meal customer ordered ("standard"/"deluxe")
     static String[] ccustomerRoom = new String[listSize];    //stores what type of room customer booked
 
+    static CreateValidatePassword cvp = new CreateValidatePassword();
 
     public static void main(String[] args){
-        CreateValidatePassword cvp = new CreateValidatePassword();
         if(cvp.logIn()){
             menu();
         }
@@ -176,7 +176,7 @@ public class MotelApplication {
         menu();
     }
 
-    //main menu method, can get refrenced from other methods to innitiate menu.
+    //main menu method, can get referenced from other methods to Initiate menu.
     public static void menu(){
         //Menu design
         System.out.println("**************************************\n" +
@@ -186,7 +186,8 @@ public class MotelApplication {
                 "(Press 2) - Select the type of food customer wishes\n" +
                 "(Press 3) - Select the type of room customer wishes\n" +
                 "(Press 4) - Output the Customer bill\n" +
-                "(Press e) - to exit the program\n");
+                "(press 5) - Log out of the program\n" +
+                "(Press e) - to exit the program");
         System.out.println("***************************************\n" +
                 "Select an option from the above menu:");
 
@@ -204,6 +205,9 @@ public class MotelApplication {
                 break;
             case'4':
                 displayCustomerBill();
+            case'5':
+                System.out.println("Logging out...");
+                main(new String[1]);
             case'e':
                 System.out.println("Exiting program...");
                 System.exit(0);
