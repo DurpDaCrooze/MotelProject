@@ -17,7 +17,7 @@ public class MotelApplication {
     static int[] customerStay = new int[listSize];          //stores customer stay(1 int = 1 day)
 
     static String[] customerMeal = new String[listSize];    //stores what type of meal customer ordered ("standard"/"deluxe")
-    static String[] ccustomerRoom = new String[listSize];    //stores what type of room customer booked
+    static String[] customerRoom = new String[listSize];    //stores what type of room customer booked
 
     static CreateValidatePassword cvp = new CreateValidatePassword();
 
@@ -43,8 +43,8 @@ public class MotelApplication {
         }else{
             totalFoodPrice = 0;
         }
-        if(ccustomerRoom[customer] != null){
-             totalRoomPrice = totalPrice.totRoom(ccustomerRoom[customer], customerStay[customer]);
+        if(customerRoom[customer] != null){
+             totalRoomPrice = totalPrice.totRoom(customerRoom[customer], customerStay[customer]);
         }else{
             totalRoomPrice = 0;
         }
@@ -80,7 +80,7 @@ public class MotelApplication {
         switch(userOption){
             case 'a':
                 customerRoom.roomType = "suite";
-                ccustomerRoom[customer] = customerRoom.roomType;
+                MotelApplication.customerRoom[customer] = customerRoom.roomType;
                 System.out.println("<<<< " + customerRoom.roomType.toUpperCase(Locale.ROOT) + " >>>>\n" +
                         "Room area = " + customerRoom.area() +
                         "\nRoom cost = " + customerRoom.roomCost(customerStay[customer]) +
@@ -89,7 +89,7 @@ public class MotelApplication {
                 break;
             case 'p':
                 customerRoom.roomType = "premium";
-                ccustomerRoom[customer] = customerRoom.roomType;
+                MotelApplication.customerRoom[customer] = customerRoom.roomType;
                 System.out.println("<<<< " + customerRoom.roomType.toUpperCase(Locale.ROOT) + " >>>>\n" +
                         "Room area = " + customerRoom.area() +
                         "\nRoom cost = " + customerRoom.roomCost(customerStay[customer]) +
@@ -98,7 +98,7 @@ public class MotelApplication {
                 break;
             case 's':
                 customerRoom.roomType = "standard";
-                ccustomerRoom[customer] = customerRoom.roomType;
+                MotelApplication.customerRoom[customer] = customerRoom.roomType;
                 System.out.println("<<<< " + customerRoom.roomType.toUpperCase(Locale.ROOT) + " >>>>\n" +
                         "Room area = " + customerRoom.area() +
                         "\nRoom cost = " + customerRoom.roomCost(customerStay[customer]) +
