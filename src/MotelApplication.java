@@ -1,3 +1,10 @@
+/**
+ * MotelProject.java
+ * Name:  Luca Cassar
+ * class: 11 Sans Serif
+ */
+
+
 /*MotelApplication.java
     Name: Luca Cassar
     Class: Year 10 Monologue
@@ -72,8 +79,7 @@ public class MotelApplication {
                 "-----------------------\n" +
                 "Select an option:");
 
-        Scanner uIn1 = new Scanner(System.in);  //Not exactly sure on why I had to create another scanner obj,
-                                                //usually it works when I reuse the same one, anyways just so you know.
+        Scanner uIn1 = new Scanner(System.in);
 
         char userOption = uIn1.nextLine().charAt(0);
         Rooms customerRoom = new Rooms();
@@ -123,8 +129,7 @@ public class MotelApplication {
                 "of days -> " + customerStay[customer] +
                 "\nWhat type of meal do you wish <d>DELUXE or <s>STANDARD:");
 
-        Scanner uIn1 = new Scanner(System.in);  //Not exactly sure on why I had to create another scanner obj,
-                                                //usually it works when I reuse the same one, anyways just so you know.
+        Scanner uIn1 = new Scanner(System.in);
 
         String userIn = uIn1.nextLine();
         switch(userIn.charAt(0)){
